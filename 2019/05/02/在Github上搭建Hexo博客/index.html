@@ -19,7 +19,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
 <meta property="article:published_time" content="2019-05-02T13:02:00.000Z">
-<meta property="article:modified_time" content="2019-05-03T16:50:14.000Z">
+<meta property="article:modified_time" content="2020-03-15T12:59:38.801Z">
 <meta property="article:author" content="Morken">
 <meta property="article:tag" content="摸索&amp;练习">
 <meta property="article:tag" content="Hexo">
@@ -142,7 +142,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 256 个字)
+                    2 分钟 读完 (大约 272 个字)
                 </span>
                 
                 
@@ -175,17 +175,18 @@
 
 <p>创建SSH，一路回车</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;youremail&quot;</span><br></pre></td></tr></table></figure>
-<p>打开.ssh文件夹，<br>在GitHub的setting中，找到SSH keys的设置选项，<br>点击New SSH key，把id_rsa.pub里面的信息复制进去。</p>
+
+<p>打开<code>.ssh</code>文件夹，<code>id_rsa.pub</code>文件，<br>在<code>GitHub账号</code>的<code>setting</code>中，找到<code>SSH keys</code>的设置选项，<br>点击<code>New SSH key</code>，把<code>id_rsa.pub</code>里面的信息复制进去。</p>
 <p>检查是否成功</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com  &#x2F;&#x2F;这里要手动输入&#96;yes&#96;</span><br></pre></td></tr></table></figure>
 
 
-
-<h2 id="把Hexo部署到Github"><a href="#把Hexo部署到Github" class="headerlink" title="把Hexo部署到Github"></a>把Hexo部署到Github</h2><p>安装部署工具</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 
 <p>修改根目录的_config.yml文件</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/YourgithubName/YourgithubName.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="把Hexo部署到Github"><a href="#把Hexo部署到Github" class="headerlink" title="把Hexo部署到Github"></a>把Hexo部署到Github</h2><p>安装部署工具</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 
 <p>然后素质三联</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>

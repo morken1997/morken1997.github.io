@@ -1183,7 +1183,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #c6a1ad;
+  background: #1112ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1531,7 +1531,7 @@ pre .javascript .function {
   transform: rotate(30deg);
 }
 .post-button {
-  margin-top: 40px;
+  margin-top: 0px;
   text-align: center;
 }
 .use-motion .post-block,
@@ -1808,7 +1808,7 @@ pre .javascript .function {
   color: #999;
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 0.75em;
-  margin: 3px 0 60px 0;
+  margin: 3px 0 3px 0;
   text-align: center;
 }
 .posts-expand .post-meta .post-description {

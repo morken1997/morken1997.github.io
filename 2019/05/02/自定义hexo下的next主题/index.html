@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.2.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/illidan.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/illidan.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/illidan.jpg">
+  <link rel="mask-icon" href="/images/level_05.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"fanjian.me","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="很惭愧，就做了一点微小的工作。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自定义hexo下的next主题">
+<meta property="og:url" content="https://fanjian.me/2019/05/02/%E8%87%AA%E5%AE%9A%E4%B9%89hexo%E4%B8%8B%E7%9A%84next%E4%B8%BB%E9%A2%98/index.html">
+<meta property="og:site_name" content="販劍">
+<meta property="og:description" content="很惭愧，就做了一点微小的工作。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-05-02T13:11:12.000Z">
+<meta property="article:modified_time" content="2020-04-08T17:20:00.000Z">
+<meta property="article:author" content="Morken">
+<meta property="article:tag" content="摸索&amp;练习">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="膜蛤">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://fanjian.me/2019/05/02/%E8%87%AA%E5%AE%9A%E4%B9%89hexo%E4%B8%8B%E7%9A%84next%E4%B8%BB%E9%A2%98/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://fanjian.me/2019/05/02/%E8%87%AA%E5%AE%9A%E4%B9%89hexo%E4%B8%8B%E7%9A%84next%E4%B8%BB%E9%A2%98/","path":"2019/05/02/自定义hexo下的next主题/","title":"自定义hexo下的next主题"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>自定义hexo下的next主题 | 販劍</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">販劍</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">fanjian.me</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F%E5%90%8E%E9%87%8D%E6%96%B0%E9%85%8D%E7%BD%AEhexo%E8%BF%9E%E6%8E%A5github-pages%EF%BC%88%E9%9C%80%E9%A2%84%E5%85%88%E4%BF%9D%E5%AD%98blog%E6%96%87%E4%BB%B6%E5%A4%B9%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">重装系统后重新配置hexo连接github pages（需预先保存blog文件夹）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%AF%E8%83%BD%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">2.</span> <span class="nav-text">可能出现的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo%E6%AF%8F%E6%AC%A1%E9%83%A8%E7%BD%B2%E5%88%B0Github%E5%90%8E%E9%83%BD%E8%A6%81%E9%87%8D%E6%96%B0%E8%AE%BE%E7%BD%AE%E5%9F%9F%E5%90%8D"><span class="nav-number">2.1.</span> <span class="nav-text">Hexo每次部署到Github后都要重新设置域名</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E9%85%8D%E7%BD%AE-%E7%BE%8E%E5%8C%96"><span class="nav-number">3.</span> <span class="nav-text">自定义配置&amp;美化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%BB%E6%8E%89%E5%9B%BE%E7%89%87%E8%BE%B9%E6%A1%86"><span class="nav-number">3.1.</span> <span class="nav-text">去掉图片边框</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E4%B8%8D%E8%92%9C%E5%AD%90%E7%BB%9F%E8%AE%A1"><span class="nav-number">3.2.</span> <span class="nav-text">添加不蒜子统计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%99%E4%B8%8D%E8%92%9C%E5%AD%90%E7%BB%9F%E8%AE%A1%E6%B7%BB%E5%8A%A0%E6%96%87%E5%AD%97"><span class="nav-number">3.3.</span> <span class="nav-text">给不蒜子统计添加文字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E5%A4%9A%E4%B8%AA%E6%A0%87%E7%AD%BE%E7%9A%84%E6%A0%BC%E5%BC%8F"><span class="nav-number">3.4.</span> <span class="nav-text">添加多个标签的格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%8ANexT%E4%B8%BB%E9%A2%98%E4%B8%AD%E7%9A%84%E6%A0%87%E7%AD%BE%E4%BB%8E%E5%BA%95%E9%83%A8%E6%8C%AA%E5%88%B0%E9%A1%B6%E9%83%A8"><span class="nav-number">3.5.</span> <span class="nav-text">把NexT主题中的标签从底部挪到顶部</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%91%E7%8A%B6%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95"><span class="nav-number">3.6.</span> <span class="nav-text">树状文件目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A7%BB%E5%8A%A8Hexo%E9%9C%80%E8%A6%81%E4%BF%9D%E5%AD%98%E7%9A%84%E6%96%87%E4%BB%B6"><span class="nav-number">3.7.</span> <span class="nav-text">移动Hexo需要保存的文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A6%96%E9%A1%B5%E4%B8%AD%E6%96%87%E7%AB%A0%E6%98%BE%E7%A4%BA%E5%9B%BE%E7%89%87"><span class="nav-number">3.8.</span> <span class="nav-text">首页中文章显示图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NexT%E4%B8%BB%E9%A2%98%E5%8E%BB%E6%8E%89%E9%A1%B6%E9%83%A8%E9%BB%91%E7%BA%BF"><span class="nav-number">3.9.</span> <span class="nav-text">NexT主题去掉顶部黑线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%94%B9%E6%89%8B%E6%9C%BA%E7%AB%AF%E6%96%87%E7%AB%A0%E9%97%B4%E8%B7%9D"><span class="nav-number">3.10.</span> <span class="nav-text">更改手机端文章间距</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E4%B8%BB%E9%A1%B5%E4%B8%ADpost%E7%AE%80%E4%BB%8B%E7%9A%84%E7%A9%BA%E8%A1%8C"><span class="nav-number">3.11.</span> <span class="nav-text">修改主页中post简介的空行</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Morken"
+      src="/images/illidan.svg">
+  <p class="site-author-name" itemprop="name">Morken</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/morken1997" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;morken1997" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:morkenshawn@gmail.com" title="E-Mail → mailto:morkenshawn@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://steamcommunity.com/id/morkenshawn" title="Steam → https:&#x2F;&#x2F;steamcommunity.com&#x2F;id&#x2F;morkenshawn" rel="noopener me" target="_blank"><i class="fa-brands fa-steam fa-fw"></i>Steam</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://fanjian.me/2019/05/02/%E8%87%AA%E5%AE%9A%E4%B9%89hexo%E4%B8%8B%E7%9A%84next%E4%B8%BB%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/illidan.svg">
+      <meta itemprop="name" content="Morken">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="販劍">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="自定义hexo下的next主题 | 販劍">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          自定义hexo下的next主题
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-05-02 21:11:12" itemprop="dateCreated datePublished" datetime="2019-05-02T21:11:12+08:00">2019-05-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2020-04-09 01:20:00" itemprop="dateModified" datetime="2020-04-09T01:20:00+08:00">2020-04-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>　　很惭愧，就做了一点微小的工作。</p>
+<span id="more"></span>
+
+<h1 id="重装系统后重新配置hexo连接github-pages（需预先保存blog文件夹）"><a href="#重装系统后重新配置hexo连接github-pages（需预先保存blog文件夹）" class="headerlink" title="重装系统后重新配置hexo连接github pages（需预先保存blog文件夹）"></a>重装系统后重新配置hexo连接github pages（需预先保存blog文件夹）</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// Git Node.js </span><br><span class="line">npm install hexo-cli -g</span><br><span class="line">git config --global user.name &quot;yourname&quot;</span><br><span class="line">git config --global user.email &quot;youremail&quot;</span><br><span class="line">ssh-keygen -t rsa -C &quot;youremail&quot;</span><br></pre></td></tr></table></figure>
+<p>打开<code>.ssh</code>文件夹，<code>id_rsa.pub</code>文件，<br>在<code>GitHub账号</code>的<code>setting</code>中，找到<code>SSH keys</code>的设置选项，<br>点击<code>New SSH key</code>，把<code>id_rsa.pub</code>里面的<code>信息</code>复制进去。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">检查是否成功</span><br><span class="line">ssh -T git@github.com  //这里要手动输入`yes`</span><br><span class="line">// 安装部署工具</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<h1 id="可能出现的问题"><a href="#可能出现的问题" class="headerlink" title="可能出现的问题"></a>可能出现的问题</h1><h2 id="Hexo每次部署到Github后都要重新设置域名"><a href="#Hexo每次部署到Github后都要重新设置域名" class="headerlink" title="Hexo每次部署到Github后都要重新设置域名"></a>Hexo每次部署到Github后都要重新设置域名</h2><p>在博客根目录下的<code>source</code>文件夹中添加<code>CNAME</code>文件，保存时无后缀名。里面写上域名。</p>
+<h1 id="自定义配置-美化"><a href="#自定义配置-美化" class="headerlink" title="自定义配置&amp;美化"></a>自定义配置&amp;美化</h1><h2 id="去掉图片边框"><a href="#去掉图片边框" class="headerlink" title="去掉图片边框"></a>去掉图片边框</h2><p>打开<code>themes\next\source\css\_custom\custom.styl</code><br>添加代码： </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.posts-expand .post-body img &#123;</span><br><span class="line">    border: none;</span><br><span class="line">    padding: 0px;</span><br><span class="line">&#125;</span><br><span class="line">.post-gallery .post-gallery-img img &#123;</span><br><span class="line">    padding: 0px;                //设置为0px</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="添加不蒜子统计"><a href="#添加不蒜子统计" class="headerlink" title="添加不蒜子统计"></a>添加不蒜子统计</h2><p>Hexo的NexT主题6.0，<code>主题配置文件</code>中已内置不蒜子访客统计代码。按需修改。</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">busuanzi_count:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">total_visitors:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">total_visitors_icon:</span> <span class="string">user</span></span><br><span class="line">  <span class="attr">total_views:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">total_views_icon:</span> <span class="string">eye</span></span><br><span class="line">  <span class="attr">post_views:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">post_views_icon:</span> <span class="string">eye</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="给不蒜子统计添加文字"><a href="#给不蒜子统计添加文字" class="headerlink" title="给不蒜子统计添加文字"></a>给不蒜子统计添加文字</h2><p>在<code>themes\next\layout\_third-party\analytics\busuanzi-counter.swig</code>文件中可以添加文字。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">共<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;busuanzi-value&quot;</span> <span class="attr">id</span>=<span class="string">&quot;busuanzi_value_site_uv&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>人次</span><br></pre></td></tr></table></figure>
+
+<h2 id="添加多个标签的格式"><a href="#添加多个标签的格式" class="headerlink" title="添加多个标签的格式"></a>添加多个标签的格式</h2><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">一点微小的工作</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2019-05-02 21:11:12</span></span><br><span class="line"><span class="attr">tags:</span> </span><br><span class="line">    <span class="bullet">-</span> <span class="string">膜蛤</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">笔记</span></span><br><span class="line"><span class="attr">categories:</span> <span class="string">笔记</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="把NexT主题中的标签从底部挪到顶部"><a href="#把NexT主题中的标签从底部挪到顶部" class="headerlink" title="把NexT主题中的标签从底部挪到顶部"></a>把NexT主题中的标签从底部挪到顶部</h2><p>打开文件<code>blog\themes\next\layout\_macro\post.swig</code>  ,<br>把<code>&lt;footer class=&quot;post-footer&quot;&gt;</code>下的</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if post.tags and post.tags.length and not is_index %&#125;</span><br><span class="line">  &lt;div class=&quot;post-tags&quot;&gt;</span><br><span class="line">    &#123;% for tag in post.tags %&#125;</span><br><span class="line">      &lt;a href=&quot;&#123;&#123; url_for(tag.path) &#125;&#125;&quot; rel=&quot;tag&quot;&gt;# &#123;&#123; tag.name &#125;&#125;&lt;/a&gt;</span><br><span class="line">    &#123;% endfor %&#125;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+<p>插入到<code>&lt;div class=&quot;post-meta&quot;&gt;</code>下的任意位置。<br>可以随意修改样式。</p>
+<h2 id="树状文件目录"><a href="#树状文件目录" class="headerlink" title="树状文件目录"></a>树状文件目录</h2><p>Windows打开<code>cmd</code><br>输入：<code>tree [path]</code><br>后面可加参数：<code>/F /A</code></p>
+<h2 id="移动Hexo需要保存的文件"><a href="#移动Hexo需要保存的文件" class="headerlink" title="移动Hexo需要保存的文件"></a>移动Hexo需要保存的文件</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">└─blog</span><br><span class="line">    │  _config.yml            站点配置文件</span><br><span class="line">    │</span><br><span class="line">    ├─scaffolds</span><br><span class="line">    │      post.md            新博文配置-添加默认分类等参数</span><br><span class="line">    │</span><br><span class="line">    ├─source</span><br><span class="line">    │  │  404.html            404页面</span><br><span class="line">    │  │  CNAME               部署到Github时不再修改域名</span><br><span class="line">    │  │  robots.txt          Google爬虫</span><br><span class="line">    │  │</span><br><span class="line">    │  ├─about</span><br><span class="line">    │  │      index.md        博客about页面</span><br><span class="line">    │  │</span><br><span class="line">    │  ├─categories</span><br><span class="line">    │  │      index.md        博客categories页面</span><br><span class="line">    │  │</span><br><span class="line">    │  └─_posts               这里是你写的博客</span><br><span class="line">    │</span><br><span class="line">    └─themes</span><br><span class="line">        └─next</span><br><span class="line">            │  _config.yml    主题配置文件</span><br><span class="line">            │</span><br><span class="line">            └─source</span><br><span class="line">                └─images      整个网站的图片</span><br></pre></td></tr></table></figure>
+<h2 id="首页中文章显示图片"><a href="#首页中文章显示图片" class="headerlink" title="首页中文章显示图片"></a>首页中文章显示图片</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: </span><br><span class="line">date: 2017-11-09 14:33:32</span><br><span class="line">tags:</span><br><span class="line">categories:</span><br><span class="line">copyright: true</span><br><span class="line">comments: false</span><br><span class="line">description: </span><br><span class="line">top:</span><br><span class="line">photos: </span><br><span class="line">    - &quot;图片地址&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>或者使用<code>&lt;!--more--&gt;</code>来分割图片和正文。</p>
+<h2 id="NexT主题去掉顶部黑线"><a href="#NexT主题去掉顶部黑线" class="headerlink" title="NexT主题去掉顶部黑线"></a>NexT主题去掉顶部黑线</h2><p>部署的网页中：<br>在<code>themes\next\layout\_layout.swig</code>中把<code>&lt;div class=&quot;headband&quot;&gt;&lt;/div&gt;</code>用<code>&#123; # # &#125;</code>注释掉。</p>
+<p><del>(此处<code>&#123;</code>和<code>#</code>之间在md文档里不能紧挨着，否则在网页里无法显示)</del><br>本地<code>(localhost:4000)</code>：<br>在<code>themes\next\source\css\_variables\base.styl</code>中把<code>headband-height</code>的值改为<code>0px</code>。</p>
+<h2 id="更改手机端文章间距"><a href="#更改手机端文章间距" class="headerlink" title="更改手机端文章间距"></a>更改手机端文章间距</h2><p>打开文件<code>blog\themes\next\source\css\_common\scaffolding\mobile.styl</code><br>修改下面位置的值。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">.header-inner &#123;</span><br><span class="line">  margin-bottom: -8px  !important;  //这里可以改</span><br><span class="line">&#125;</span><br><span class="line">.main-inner &#123;</span><br><span class="line">  margin-top: -8px  !important;   //这里可以改</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">  .content-wrap &#123;</span><br><span class="line">  padding: 8px  !important;    //这里可以改</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.post-block &#123;</span><br><span class="line">  // Inside posts blocks content padding (default 40px).</span><br><span class="line">  padding: $content-mobile-padding 0 !important;   //首页预览内容的缩进值。</span><br><span class="line">  margin-top: initial !important;  //这里可以改</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="修改主页中post简介的空行"><a href="#修改主页中post简介的空行" class="headerlink" title="修改主页中post简介的空行"></a>修改主页中post简介的空行</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">blog\themes\next\source\css\_common\components\post\post-header.styl</span><br><span class="line"></span><br><span class="line">.post-meta &#123;</span><br><span class="line">	margin: 3px 0 60px 0;	// 下边距也改为3px</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">blog\themes\next\source\css\_common\components\post\post.styl</span><br><span class="line"></span><br><span class="line">.post-button &#123;</span><br><span class="line">  margin-top: 40px;			// 上边距改为0px</span><br><span class="line">  text-align: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%91%B8%E7%B4%A2-%E7%BB%83%E4%B9%A0/" rel="tag"># 摸索&练习</a>
+              <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+              <a href="/tags/%E8%86%9C%E8%9B%A4/" rel="tag"># 膜蛤</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2019/05/02/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%20hexo%20+%20github%20pages%20%E9%85%8D%E7%BD%AE%E6%AD%A5%E9%AA%A4/" rel="prev" title="个人博客 hexo + github pages 配置步骤">
+                  <i class="fa fa-angle-left"></i> 个人博客 hexo + github pages 配置步骤
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2019/05/03/md%E8%AF%AD%E6%B3%95/" rel="next" title=".md语法">
+                  .md语法 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2019 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-lock"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Morken</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

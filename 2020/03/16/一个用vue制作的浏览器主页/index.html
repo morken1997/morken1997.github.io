@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.2.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/illidan.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/illidan.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/illidan.jpg">
+  <link rel="mask-icon" href="/images/level_05.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"fanjian.me","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="个人浏览器主页，练手项目。　　	vue webpack">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一个用vue制作的个人浏览器主页">
+<meta property="og:url" content="https://fanjian.me/2020/03/16/%E4%B8%80%E4%B8%AA%E7%94%A8vue%E5%88%B6%E4%BD%9C%E7%9A%84%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%BB%E9%A1%B5/index.html">
+<meta property="og:site_name" content="販劍">
+<meta property="og:description" content="个人浏览器主页，练手项目。　　	vue webpack">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://fanjian.me/toki.png">
+<meta property="og:image" content="https://fanjian.me/weather.png">
+<meta property="og:image" content="https://fanjian.me/icon.png">
+<meta property="article:published_time" content="2020-03-15T18:24:51.000Z">
+<meta property="article:modified_time" content="2020-04-28T10:44:28.974Z">
+<meta property="article:author" content="Morken">
+<meta property="article:tag" content="摸索&amp;练习">
+<meta property="article:tag" content="vue">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://fanjian.me/toki.png">
+
+
+<link rel="canonical" href="https://fanjian.me/2020/03/16/%E4%B8%80%E4%B8%AA%E7%94%A8vue%E5%88%B6%E4%BD%9C%E7%9A%84%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%BB%E9%A1%B5/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://fanjian.me/2020/03/16/%E4%B8%80%E4%B8%AA%E7%94%A8vue%E5%88%B6%E4%BD%9C%E7%9A%84%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%BB%E9%A1%B5/","path":"2020/03/16/一个用vue制作的浏览器主页/","title":"一个用vue制作的个人浏览器主页"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>一个用vue制作的个人浏览器主页 | 販劍</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">販劍</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">fanjian.me</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80"><span class="nav-number">1.1.</span> <span class="nav-text">项目地址</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E7%94%A8jQuery%E3%80%81popper-js%E3%80%81Bootstrap"><span class="nav-number">1.2.</span> <span class="nav-text">引用jQuery、popper.js、Bootstrap</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%97%B6%E9%92%9F"><span class="nav-number">2.</span> <span class="nav-text">时钟</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%A9%E6%B0%94"><span class="nav-number">3.</span> <span class="nav-text">天气</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96api"><span class="nav-number">3.1.</span> <span class="nav-text">获取api</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E5%9D%90%E6%A0%87"><span class="nav-number">3.2.</span> <span class="nav-text">获取坐标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82"><span class="nav-number">3.3.</span> <span class="nav-text">发送请求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE"><span class="nav-number">3.4.</span> <span class="nav-text">处理数据</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%90%9C%E7%B4%A2%E6%A1%86"><span class="nav-number">4.</span> <span class="nav-text">搜索框</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#motto"><span class="nav-number">5.</span> <span class="nav-text">motto</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AF%BC%E8%88%AA%E6%A0%8F"><span class="nav-number">6.</span> <span class="nav-text">导航栏</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%B0%E9%97%BB"><span class="nav-number">7.</span> <span class="nav-text">新闻</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">8.</span> <span class="nav-text">总结</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Morken"
+      src="/images/illidan.svg">
+  <p class="site-author-name" itemprop="name">Morken</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/morken1997" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;morken1997" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:morkenshawn@gmail.com" title="E-Mail → mailto:morkenshawn@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://steamcommunity.com/id/morkenshawn" title="Steam → https:&#x2F;&#x2F;steamcommunity.com&#x2F;id&#x2F;morkenshawn" rel="noopener me" target="_blank"><i class="fa-brands fa-steam fa-fw"></i>Steam</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://fanjian.me/2020/03/16/%E4%B8%80%E4%B8%AA%E7%94%A8vue%E5%88%B6%E4%BD%9C%E7%9A%84%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%BB%E9%A1%B5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/illidan.svg">
+      <meta itemprop="name" content="Morken">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="販劍">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="一个用vue制作的个人浏览器主页 | 販劍">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          一个用vue制作的个人浏览器主页
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-03-16 02:24:51" itemprop="dateCreated datePublished" datetime="2020-03-16T02:24:51+08:00">2020-03-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2020-04-28 18:44:28" itemprop="dateModified" datetime="2020-04-28T18:44:28+08:00">2020-04-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>　　	个人浏览器主页，练手项目。<br>　　	vue webpack </p>
+<span id="more"></span>
+
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>vue-cli 版本：2.9.6</p>
+<h2 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a><a href="https://fanjian.me/hola/">项目地址</a></h2><h2 id="引用jQuery、popper-js、Bootstrap"><a href="#引用jQuery、popper-js、Bootstrap" class="headerlink" title="引用jQuery、popper.js、Bootstrap"></a>引用jQuery、popper.js、Bootstrap</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/zyyweb/p/9589447.html">参考链接</a></p>
+<h1 id="时钟"><a href="#时钟" class="headerlink" title="时钟"></a>时钟</h1><p>首先搞了几张数字的图片：<br><img src="/toki.png"><br>然后获取当前时间并转换为字符串：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> nDate = <span class="keyword">new</span> <span class="title class_">Date</span>();</span><br><span class="line"><span class="keyword">var</span> str =</span><br><span class="line">    <span class="title function_">plusZ</span>(nDate.<span class="title function_">getHours</span>()) +</span><br><span class="line">    <span class="title function_">plusZ</span>(nDate.<span class="title function_">getMinutes</span>()) +</span><br><span class="line">    <span class="title function_">plusZ</span>(nDate.<span class="title function_">getSeconds</span>());</span><br><span class="line">    </span><br><span class="line"><span class="keyword">function</span> <span class="title function_">plusZ</span>(<span class="params">n</span>) &#123;			<span class="comment">//补零</span></span><br><span class="line">	<span class="keyword">if</span> (n &lt; <span class="number">10</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;0&quot;</span> + n;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;&quot;</span> + n;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;    </span><br></pre></td></tr></table></figure>
+<p>最后设置定时器每秒钟运行一次，这样就可以根据字符串的变化来更新时钟图片的变化了。</p>
+<h1 id="天气"><a href="#天气" class="headerlink" title="天气"></a>天气</h1><p>还是先搞了几张天气的图标：<br><img src="/weather.png"><br>由于返回的json文件里标明了当前天气的图标，只需要把它们替换成自己想要的就好了。</p>
+<p>下面是一些模板图标，比如温度、风速、湿度等等：<br><img src="/icon.png"></p>
+<h2 id="获取api"><a href="#获取api" class="headerlink" title="获取api"></a>获取api</h2><p><a target="_blank" rel="noopener" href="https://openweathermap.org/api">https://openweathermap.org/api</a><br>只需要注册一个帐号，点击邮件中的注册链接后就会在第二封邮件收到一个免费的apikey。<br>每分钟最多响应60次，足够练习使用。</p>
+<h2 id="获取坐标"><a href="#获取坐标" class="headerlink" title="获取坐标"></a>获取坐标</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">geolocation</span>(<span class="params"></span>) &#123;			<span class="comment">//获取坐标</span></span><br><span class="line">  navigator.<span class="property">geolocation</span>.<span class="title function_">getCurrentPosition</span>(<span class="variable language_">this</span>.<span class="property">buildUrl</span>,<span class="variable language_">this</span>.<span class="property">geoError</span>);</span><br><span class="line">&#125;,</span><br><span class="line"><span class="title function_">buildUrl</span>(<span class="params">position</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> lat = position.<span class="property">coords</span>.<span class="property">latitude</span>;</span><br><span class="line">  <span class="keyword">const</span> lon = position.<span class="property">coords</span>.<span class="property">longitude</span>;</span><br><span class="line"></span><br><span class="line">  <span class="variable language_">this</span>.<span class="title function_">getWeather</span>(<span class="variable constant_">API</span> + <span class="string">&quot;&amp;lat=&quot;</span> + lat + <span class="string">&quot;&amp;lon=&quot;</span> + lon + <span class="variable constant_">KEY</span>);</span><br><span class="line">  <span class="comment">//把坐标和apikey连接起来组成url，传给getWeather()</span></span><br><span class="line">&#125;,</span><br><span class="line"><span class="title function_">geoError</span>(<span class="params">error</span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="title function_">getWeather</span>(<span class="variable constant_">API</span> + <span class="string">&quot;&amp;lat=0&amp;lon=0&quot;</span> + <span class="variable constant_">KEY</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="发送请求"><a href="#发送请求" class="headerlink" title="发送请求"></a>发送请求</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="variable constant_">API</span> = <span class="string">&quot;https://api.openweathermap.org/data/2.5/weather?units=metric&quot;</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="variable constant_">KEY</span> = <span class="string">&quot;&amp;APPID=0ab1cd22e4c10d85a9c380f889155e6b&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="title function_">getWeather</span>(<span class="params">url</span>) &#123;		<span class="comment">//上面的url传到这里</span></span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">$axios</span></span><br><span class="line">    .<span class="title function_">get</span>(url)</span><br><span class="line">    .<span class="title function_">then</span>(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(res.<span class="property">data</span>);</span><br><span class="line">      </span><br><span class="line">      <span class="comment">//处理数据</span></span><br><span class="line">    &#125;)</span><br><span class="line">    .<span class="title function_">catch</span>(<span class="function"><span class="params">error</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(error);</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(url);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<h2 id="处理数据"><a href="#处理数据" class="headerlink" title="处理数据"></a>处理数据</h2><p><strong><del>下面的一些方法是第一次尝试的时候使用的，现在用不到了</del></strong></p>
+<p>返回的json文件和处理：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;coord&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;lon&quot;</span><span class="punctuation">:</span> <span class="number">120.31</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lat&quot;</span><span class="punctuation">:</span> <span class="number">22.61</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;weather&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="number">802</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;main&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Clouds&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;scattered clouds&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;icon&quot;</span><span class="punctuation">:</span> <span class="string">&quot;03n&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;base&quot;</span><span class="punctuation">:</span> <span class="string">&quot;stations&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;main&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;temp&quot;</span><span class="punctuation">:</span> <span class="number">290.23</span><span class="punctuation">,</span>			<span class="comment">// 这里返回的都是绝对温度，要减去273.15</span></span><br><span class="line">    <span class="attr">&quot;feels_like&quot;</span><span class="punctuation">:</span> <span class="number">290.44</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;temp_min&quot;</span><span class="punctuation">:</span> <span class="number">288.15</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;temp_max&quot;</span><span class="punctuation">:</span> <span class="number">292.04</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;pressure&quot;</span><span class="punctuation">:</span> <span class="number">1019</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;humidity&quot;</span><span class="punctuation">:</span> <span class="number">82</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;visibility&quot;</span><span class="punctuation">:</span> <span class="number">10000</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;wind&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;speed&quot;</span><span class="punctuation">:</span> <span class="number">1.5</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;deg&quot;</span><span class="punctuation">:</span> <span class="number">50</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;clouds&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;all&quot;</span><span class="punctuation">:</span> <span class="number">40</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;dt&quot;</span><span class="punctuation">:</span> <span class="number">1584298666</span><span class="punctuation">,</span>			<span class="comment">// 天气更新的时间（unix时间戳）</span></span><br><span class="line">  <span class="attr">&quot;sys&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="number">7940</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;country&quot;</span><span class="punctuation">:</span> <span class="string">&quot;TW&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;sunrise&quot;</span><span class="punctuation">:</span> <span class="number">1584309999</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;sunset&quot;</span><span class="punctuation">:</span> <span class="number">1584353293</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;timezone&quot;</span><span class="punctuation">:</span> <span class="number">28800</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="number">1673820</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Kaohsiung City&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;cod&quot;</span><span class="punctuation">:</span> <span class="number">200</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">JSON</span>.<span class="title function_">stringify</span>()		<span class="comment">// json转字符串</span></span><br><span class="line"><span class="title class_">JSON</span>.<span class="title function_">parse</span>(<span class="title class_">JSON</span>.<span class="title function_">stringify</span>())	<span class="comment">// 去掉双引号</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> <span class="title class_">Date</span>(time * <span class="number">1000</span>)		<span class="comment">// unix时间戳转换标准时间</span></span><br><span class="line"><span class="keyword">new</span> <span class="title class_">Date</span>(<span class="number">1584305795</span> * <span class="number">1000</span>).<span class="title function_">toLocaleString</span>()	<span class="comment">// 再转本地化时间</span></span><br><span class="line"></span><br><span class="line">.<span class="title function_">toFixed</span>(n)		<span class="comment">// 保留小数点后n位</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 每个单词首字母都大写</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">titleCase</span>(<span class="params">str</span>) &#123;</span><br><span class="line"><span class="keyword">var</span> newStr = str.<span class="title function_">split</span>(<span class="string">&#x27; &#x27;</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; newStr.<span class="property">length</span>; i++) &#123;</span><br><span class="line">		newStr[i] = newStr[i].<span class="title function_">slice</span>(<span class="number">0</span>, <span class="number">1</span>).<span class="title function_">toUpperCase</span>() + newStr[i].<span class="title function_">slice</span>(<span class="number">1</span>).<span class="title function_">toLowerCase</span>();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> newStr.<span class="title function_">join</span>(<span class="string">&#x27; &#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line">    </span><br><span class="line"><span class="comment">// 绝对温度换算</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">toCel</span>(<span class="params">n</span>) &#123;</span><br><span class="line">	<span class="keyword">return</span> n - <span class="number">273.15</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 每隔十秒重新获取一次数据</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">getWeather</span>(<span class="params"></span>) &#123; </span><br><span class="line">    <span class="built_in">setTimeout</span>( getWeather, <span class="number">1000</span> * <span class="number">10</span> ); </span><br><span class="line">    $.<span class="title function_">ajax</span>( &#123;</span><br><span class="line">		<span class="comment">// </span></span><br><span class="line">       &#125;</span><br><span class="line">    &#125; );</span><br><span class="line">&#125; <span class="title function_">getWeather</span>();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="搜索框"><a href="#搜索框" class="headerlink" title="搜索框"></a>搜索框</h1><p>简单套用了bootstrap的一个input标签的样式<br>其中切换谷歌搜索用了个小方法：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">switchGoogle</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">window</span>.<span class="title function_">open</span>(</span><br><span class="line">    <span class="string">&quot;https://www.google.com/search?q=&quot;</span> +</span><br><span class="line">      <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;search&quot;</span>).<span class="property">value</span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="motto"><a href="#motto" class="headerlink" title="motto"></a>motto</h1><p>收集了一些大牛的言论，放在本地json文件，每次页面刷新时用axios随机生成。目前词条数58。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">this</span>.<span class="property">$axios</span></span><br><span class="line">  .<span class="title function_">get</span>(<span class="string">&quot;../../static/motto.json&quot;</span>)</span><br><span class="line">  .<span class="title function_">then</span>(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(res.<span class="property">data</span>);</span><br><span class="line">    m.<span class="property">innerHTML</span> =</span><br><span class="line">      <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(res.<span class="property">data</span>.<span class="property">eng</span>[r]) +</span><br><span class="line">      <span class="string">&quot;&lt;br /&gt;&quot;</span> +</span><br><span class="line">      <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(res.<span class="property">data</span>.<span class="property">zh</span>[r]);</span><br><span class="line">  &#125;)</span><br><span class="line">  .<span class="title function_">catch</span>(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(err);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+
+<h1 id="导航栏"><a href="#导航栏" class="headerlink" title="导航栏"></a>导航栏</h1><p>一些自己常用的网站链接。直接写在template里了。</p>
+<h1 id="新闻"><a href="#新闻" class="headerlink" title="新闻"></a>新闻</h1><p>这里借用了<code>dev.to</code>和<code>hacker news</code>的api.<br>两个网站都没有认证需求，所以请求很方便。<br><strong><a target="_blank" rel="noopener" href="https://docs.dev.to/api/">dev.to官方文档</a></strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> d = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;dev&quot;</span>);</span><br><span class="line"><span class="variable language_">this</span>.<span class="property">$axios</span></span><br><span class="line">  .<span class="title function_">get</span>(<span class="string">&quot;https://dev.to/api/articles&quot;</span>)</span><br><span class="line">  .<span class="title function_">then</span>(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> n = <span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">      n +=</span><br><span class="line">        <span class="string">&#x27;&lt;p&gt;&lt;a href=&quot;&#x27;</span> +</span><br><span class="line">        res.<span class="property">data</span>[i].<span class="property">url</span> +</span><br><span class="line">        <span class="string">&#x27;&quot; style=&quot;color:black&quot;&gt;&#x27;</span> +</span><br><span class="line">        res.<span class="property">data</span>[i].<span class="property">title</span> +</span><br><span class="line">        <span class="string">&quot;&lt;/a&gt;&lt;/p&gt;&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    $(<span class="string">&quot;#dev&quot;</span>).<span class="title function_">html</span>(n);</span><br><span class="line">    <span class="comment">// d.innerHTML = n;</span></span><br><span class="line">  &#125;)</span><br><span class="line">  .<span class="title function_">catch</span>(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(err);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+
+<p>hacker news第一次请求返回的是文章id，第二次通过id请求才会返回文章标题和url。<br><strong><a target="_blank" rel="noopener" href="https://github.com/HackerNews/API">hacker news官方文档</a></strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> m = <span class="string">&quot;&quot;</span>;</span><br><span class="line"><span class="variable language_">this</span>.<span class="property">$axios</span></span><br><span class="line">  .<span class="title function_">get</span>(<span class="string">&quot;https://hacker-news.firebaseio.com/v0/topstories.json&quot;</span>)</span><br><span class="line">  .<span class="title function_">then</span>(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// console.log(res.data);</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">$axios</span></span><br><span class="line">        .<span class="title function_">get</span>(</span><br><span class="line">          <span class="string">&quot;https://hacker-news.firebaseio.com/v0/item/&quot;</span> +</span><br><span class="line">            res.<span class="property">data</span>[i] +</span><br><span class="line">            <span class="string">&quot;.json&quot;</span></span><br><span class="line">        )</span><br><span class="line">        .<span class="title function_">then</span>(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">          m +=</span><br><span class="line">            <span class="string">&#x27;&lt;p&gt;&lt;a href=&quot;&#x27;</span> +</span><br><span class="line">            res.<span class="property">data</span>.<span class="property">url</span> +</span><br><span class="line">            <span class="string">&#x27;&quot; style=&quot;color:black&quot;&gt;&#x27;</span> +</span><br><span class="line">            res.<span class="property">data</span>.<span class="property">title</span> +</span><br><span class="line">            <span class="string">&quot;&lt;/a&gt;&lt;/p&gt;&quot;</span>;</span><br><span class="line">          <span class="comment">// console.log(res.data);</span></span><br><span class="line">          $(<span class="string">&quot;#hacker&quot;</span>).<span class="title function_">html</span>(m);</span><br><span class="line">        &#125;)</span><br><span class="line">        .<span class="title function_">catch</span>(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">          <span class="variable language_">console</span>.<span class="title function_">log</span>(err);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  .<span class="title function_">catch</span>(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(err);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>对vue的生命周期还是不太熟悉，下一步继续学习加以完善。</p>
+<p>（typora真的是相当好用，强烈推荐）</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%91%B8%E7%B4%A2-%E7%BB%83%E4%B9%A0/" rel="tag"># 摸索&练习</a>
+              <a href="/tags/vue/" rel="tag"># vue</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2019/06/28/%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F%E5%90%8E%E7%9A%84%E5%BF%85%E5%A4%87%E8%BD%AF%E4%BB%B6/" rel="prev" title="重装系统后的必备软件">
+                  <i class="fa fa-angle-left"></i> 重装系统后的必备软件
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2019 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-lock"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Morken</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
